@@ -29,14 +29,12 @@
 
 <h2>Virtual Reality for Web Developers</h2>
 <p><b>Abstract:</b> <span>There is recent proliferation of VR Web Browsers and VR capabilities added to traditional browsers. This article looks at the state of browsers in VR and the state of VR on the Web via the WebVR APIs. Finishing with a look at how a web developer with can feel comfortable working in the new medium via the popular library A-Frame, which uses the custom elements API to allow HTML to markup 3D scenes which can be controlled via familiar JavaScript.</span></p>
-<h3>State of Virtual Reality and the Web</h3>
 
-<p>Accelerated 3D has been possible in the web since 2011 with the release of WebGL. </p>
-<p>The Web can handle VR thanks to new web APIs for taking advantage of Virtual Reality hardware using WebGL.</p>
+<h3>State of Virtual Reality and the Web</h3>
+<p>The web has experimented with VR before with VRML, but now WebVR takes a new approach to VR, one more suited to the modern web. We've had accelerated 3D in the web since 2011 with the release of WebGL. Now the Web can handle VR thanks to new web APIs for taking advantage of Virtual Reality hardware using WebGL.</p>
 <p>These APIs known as the WebVR APIs enable WebGL content to be displayed in 3D in a VR headset, they also provide headset and controller tracking information to give the user presence in the virtual world.</p>
-<p>WebVR was first developed in 2014 at Mozilla.</p>
-<p>In 2016 an earlier version of the standard was available for Desktop Chrome, Firefox and Samsung’s Virtual Reality web browser: Samsung Internet for Gear VR. </span></p>
-<p>These days, the standard is incredibly well supported on phones and desktops for almost all major headsets.</p>
+<p>WebVR was first developed in 2014 at Mozilla and in 2016 an earlier version of the standard was available for Desktop Chrome, Firefox and Samsung’s Virtual Reality web browser: Samsung Internet for Gear VR. </span></p>
+<p>These days, the standard is incredibly well supported on phones and desktop computers for almost all major headsets.</p>
 
 <figure>
 	<table style="background-color: #f0eee7;">
@@ -156,7 +154,7 @@
 <p>I won’t go into details of implementing the standard here as the standard is still changing. Most users will never need to deal with them directly as often WebGL tools and libraries include handling the WebVR APIs for you.</p>
 <h3>State of the WebVR APIs</h3>
 <p>Current version of the APIs is known internally as version 1.1, version 2.0 will change some of the method names and remove some unused methods.</p>
-<p>The precise details of the APIs can be read on <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">MDN</a> and the standards are discussed <a href="https://w3c.github.io/webvr/">on Github</a>. There is interest from within the WebVR community group and the W3C to move to a W3C working group once they are ready.</p>
+<p>The precise details of the APIs can be read on <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">MDN</a> and the standards are discussed <a href="https://w3c.github.io/webvr/">on Github</a>. There is interest from within the <a href="https://www.w3.org/community/webvr/">WebVR community group</a> and the W3C to move to a W3C working group once they are ready.</p>
 <p>Essentially what it provides is:</p>
 <ul>
 	<li>
@@ -184,7 +182,7 @@
 </figure>
 
 <h3>What does it mean to build a WebVR Immersive Experience?</h3>
-<p><span>Surprisingly b</span><span>uilding a Virtual Reality website raises many similar problems to tackle as building a good mobile website or progressive web app.</span></p>
+<p>Surprisingly, building a Virtual Reality website raises many of the same problems to tackle as building a good mobile website or progressive web app.</p>
 <h4>Starting Fast</h4>
 <p>One of the biggest problems being tackled on the web today is network performance which is important because:</p>
 <ul>
@@ -204,7 +202,7 @@
 <p>But bear-in-mind network operations can be CPU intensive and block the main thread. This could give the user a bad experience if it happens a lot so it is a fine line to walk.</p>
 <p>Perhaps one or two very intensive assets need to be preloaded to avoid breaking the experience but if you have so many it is taking a long time to start perhaps it's worth thinking about finding a more performant alternative.</p>
 <p>Better to show anything at all, even something incomplete, then have people leaving because they get bored looking at a loading bar.</p>
-<p>Making good use of a Service Worker and the Cache API to cache static assets for fast return visits is a great way to keep users coming back for more.</p>
+<p>Making good use of a <a href="https://medium.com/samsung-internet-dev/a-beginners-guide-to-service-workers-f76abf1960f6">Service Worker and the Cache API</a> to cache static assets for fast return visits is a great way to keep users coming back for more.</p>
 
 <h4>Progressive Enhancement</h4>
 <p>The two main platforms for VR are polar opposites: High end desktop computers with advanced controllers; and Mid-High level mobile phones, which may have only a single rotation tracked controller or no controller at all!!</p>
@@ -249,7 +247,7 @@
 			<td colspan="1" rowspan="1"><p>Cardboard-like Headsets, users with limited mobility for controllers.</p></td>
 		</tr><tr>
 			<td colspan="1" rowspan="1"><p>Traditional Controllers, i.e. XBox or Playstation.</p></td>
-			<td colspan="1" rowspan="1"><p>Works with widely supported Gamepad API,</p>
+			<td colspan="1" rowspan="1"><p>Works with widely supported <a href="https://medium.com/samsung-internet-dev/the-gamepad-reloaded-5ba866770003#.8tzhs8qz2">Gamepad API,</a></p>
 			<td colspan="1" rowspan="1"><p><span>Can be used anywhere the API is supported on Desktop and Mobile.<br>(Needs latest Safari)</span></p></td>
 		</tr><tr>
 			<td colspan="1" rowspan="1"><p>Rotation Tracking Controllers</p></td>
@@ -276,7 +274,7 @@
 
 <p><b>Another example:</b> A networked VR multiplayer game, could use tracked controllers to play the game; A mobile viewer can watch it and use gazed based interactions to choose different points of view.</p>
 
-<h4>Test as you develop.</h4>
+<h4>Test as you develop</h4>
 <p>Like modern web design the key is to design mobile first. As you build your scene regularly test it on <b>real</b> mid level smart phones with no controllers to ensure it will work for the majority of your users.</p>
 
 <p>WebVR allows you to target both Platforms at once but delivering the same content to both may result in mobile struggling or desktops not being used to their full potential.</p>
@@ -314,7 +312,7 @@
 <p>By delivering VR assets dynamically and separately like those of a web page you can take advantage of all the smart caching the web can provide from the CDN all the way down to the HTTP cache and the Service Worker's Cache API on the device.</p>
 <p>Further more the user can jump straight into your VR experience with very little waiting.</p>
 <p>An optimised WebVR website can render the first frame within a single second of the user landing on the website. Totally cutting out any lengthy initial downloads or app stores. Massively increasing engagement.</p>
-<p>Experiences can be shared with nothing but a URL making it much more likely your VR content will go viral due to it’s low barrier to entry.</p>
+<p>Experiences can be shared with nothing but a URL, which can be shared by social media or email, even written on a wall or a displayed on TV, making it much more likely your VR content will go viral due to it’s low barrier to entry.</p>
 
 <h4>Making the most out of the quick web</h4>
 <p>One feature WebVR sites often has is that before they enter VR you can usually view and interact with the scene on your 2D display the view will often rotate with the phone giving the appearance of a magic window.</p>
@@ -325,7 +323,7 @@
 <p>There are many web APIs you may have heard of or used which become massively more relevant in a Virtual Reality context.</p>
 <p><b>WebSockets — </b>Used to stream text and binary data to a server in real time. In VR they can be used to sync 100s of users in real time to enjoy a shared experienced and see Avatars representing each other. I recently produced an open source demo where I did this live for <a href="https://medium.com/samsung-internet-dev/wow-that-was-some-night-in-vr-ba091be38794">over 100 users at a conference</a>.</p>
 <p><b>WebRTC — </b>To expand upon shared VR, one can also use WebRTC to maintain Peer to Peer connections for Binary Data and Video/Audio Streaming. This can be used to allow two avatars to perform voice chat. Or to sync the position and posture of a Virtual Reality Avatar without going through a central server. This can be used to connect 6–8 users at a time.</p>
-<p><b>WebAudio — </b>One of the most surprisingly powerful APIs. The browser contains everything you need for audio manipulation and analysis. One can even produce the Head-related transfer function needed for spatial audio in VR. For producing virtual environments that give immersion WebAudio is more important than ever before.</p>
+<p><b><a href="https://medium.com/samsung-internet-dev/web-audio-on-different-platforms-67fc9ffc2c4e">WebAudio</a> — </b>One of the most surprisingly powerful APIs. The browser contains everything you need for audio manipulation and analysis. One can even use a panner node for spatial audio in VR. For producing virtual environments that give an immersive feel, WebAudio is more important than ever before.</p>
 <p><b>SpeechRecognition — </b>Newer browsers contain a speech recognition engine built in! Useful for giving commands and entering text when a real or virtual keyboard is difficult or unwieldy. There is a great example built for VR here: <a href="https://samsunginter.net/word-drop/">https://diekus.net/Word-Drop/</a></p>
 
 <h3>What effect might VR have on the web in the longer term?</h3>
