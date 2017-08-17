@@ -35,7 +35,7 @@
 <p>The Web can handle VR thanks to new web APIs for taking advantage of Virtual Reality hardware using WebGL.</p>
 <p>These APIs known as the WebVR APIs enable WebGL content to be displayed in 3D in a VR headset, they also provide headset and controller tracking information to give the user presence in the virtual world.</p>
 <p>WebVR was first developed in 2014 at Mozilla.</p>
-<p>In 2016 an earlier version of the standard was available for Desktop Chrome, Firefox and Samsung’s Virtual Reality web browser: Samsung Internet for GearVR. </span></p>
+<p>In 2016 an earlier version of the standard was available for Desktop Chrome, Firefox and Samsung’s Virtual Reality web browser: Samsung Internet for Gear VR. </span></p>
 <p>These days, the standard is incredibly well supported on phones and desktops for almost all major headsets.</p>
 
 <figure>
@@ -116,13 +116,13 @@
 
 <figure>
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/38H8TaR1bBM" frameborder="0" allowfullscreen></iframe>
-	<figcaption>WebVR APIs demonstrated in Samsung Internet for GearVR</figcaption>
+	<figcaption>WebVR APIs demonstrated in Samsung Internet for Gear VR</figcaption>
 </figure>
 
 
-<h3>Additional Web APIs applicable to VR</h3>
-<p>These APIs are not part of the WebVR API but are useful for viewing traditional websites in an immersive web browser without using WebGL.</p>
-<p>Right now these are only available on <i>Samsung Internet for GearVR</i> because that is the only VR web browser which can also browse the traditional web.</p>
+<h3>Additional VR related, Web APIs in Samsung Internet</h3>
+<p>These APIs are not part of the WebVR API but are useful for viewing immersive content in traditional websites in an immersive web browser without needing to use WebGL.</p>
+<p>These APIs are being developed for <i>Samsung Internet for Gear VR</i> we hope they will be picked up by other browsers and standardised.</p>
 
 
 <h4>Panoramic Video</h4>
@@ -141,13 +141,13 @@
 <pre><code>&lt;video src=”/360.webm" type=”video/webm; dimension=360;”&gt;&lt;/video&gt;</code></pre>
 
 <h4>Changing the Sky</h4>
-<p><span>Another API available in </span><span>Samsung Internet for GearVR</span><span>is a JavaScript API for changing the background image of the VR web browser to one of the developer’s choosing. </span></p>
+<p><span>Another API available in </span><span>Samsung Internet for Gear VR</span><span>is a JavaScript API for changing the background image of the VR web browser to one of the developer’s choosing. </span></p>
 <p>Your traditional 2D website is still visible but the surroundings are set to one which matches the environment of your site.</p>
 <pre><code>window.SamsungChangeSky({ sphere: 'http://site.com/blue-sky.jpg' });</code></pre>
 
 <figure>
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/9NefsqY3uGw" frameborder="0" allowfullscreen></iframe>
-	<figcaption>Example of changing the Skybox with JavaScript in Samsung Internet for GearVR</figcaption>
+	<figcaption>Example of changing the Skybox with JavaScript in Samsung Internet for Gear VR</figcaption>
 </figure>
 
 <h3>What is WebVR?</h3>
@@ -156,7 +156,7 @@
 <p>I won’t go into details of implementing the standard here as the standard is still changing. Most users will never need to deal with them directly as often WebGL tools and libraries include handling the WebVR APIs for you.</p>
 <h3>State of the WebVR APIs</h3>
 <p>Current version of the APIs is known internally as version 1.1, version 2.0 will change some of the method names and remove some unused methods.</p>
-<p>The precise details of the APIs can be read on <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">MDN</a> and the standards are discussed <a href="https://w3c.github.io/webvr/">on Github</a>. There is current interest from within the WebVR community group and the W3C to standardise under the W3C once the standards are ready.</p>
+<p>The precise details of the APIs can be read on <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">MDN</a> and the standards are discussed <a href="https://w3c.github.io/webvr/">on Github</a>. There is interest from within the WebVR community group and the W3C to move to a W3C working group once they are ready.</p>
 <p>Essentially what it provides is:</p>
 <ul>
 	<li>
@@ -171,7 +171,7 @@
 
 
 <ul>
-	<li>6 degree of freedom and 3 degree of freedom controller support allowing controllers like those of the HTC Vive and the GearVR to work in Virtual Reality. Allowing the user to use their hands to interact with the virtual environment. </li>
+	<li>6 degree of freedom and 3 degree of freedom controller support allowing controllers like those of the HTC Vive and the Gear VR to work in Virtual Reality. Allowing the user to use their hands to interact with the virtual environment. </li>
 	<li>Information about how the headset needs the 3D information rendered. Such as Field of View, how to position the render for each eye on the canvas.</li>
 	<li>A new headset specific requestAnimationFrame synced to the refresh rate of the display in the headset.</li>
 	<li>A method of submitting the rendered frames to the headset in the form of a WebGL enabled canvas element.</li>
@@ -211,7 +211,7 @@
 
 <figure>
 	<img src="article-images/image3.jpg">		
-	<figcaption>A photo of a HTC Vive with a Positional Tracking Controller, Samsung GearVR, Google Daydream and a pile of Google Carboards in the back.</figcaption>
+	<figcaption>A photo of a HTC Vive with a Positional Tracking Controller, Samsung Gear VR, Google Daydream and a pile of Google Carboards in the back.</figcaption>
 </figure>
 
 <b>This presents us with two challenges:</b>
@@ -220,7 +220,7 @@
 	<li>Present a user friendly experience across VR devices with a wide range of inputs.</li>
 </ol>
 
-<p>Phones have by far the largest reach due to the popularity of the GearVR and Daydream and the cheap price and high availability of the Google Cardboard headsets.</p>
+<p>Phones have by far the largest reach due to the popularity of the Gear VR and Daydream and the cheap price and high availability of the Google Cardboard headsets.</p>
 
 <p>Below I have described some typical controller configurations, you don’t need to support them all but handling the 'no controller' situation as a baseline and also supporting another controller option if applicable will allow everyone to experience something. Supporting all controller configurations would be nice but in my opinion not reasonable expectation.</p>
 
@@ -254,7 +254,7 @@
 		</tr><tr>
 			<td colspan="1" rowspan="1"><p>Rotation Tracking Controllers</p></td>
 			<td colspan="1" rowspan="1"><p>Allows the user to Gesture like a laser pointer</p></td>
-			<td colspan="1" rowspan="1"><p>Can be used in Daydream devices and GearVR to similar effect to the fully tracked controllers.</p></td>
+			<td colspan="1" rowspan="1"><p>Can be used in Daydream devices and Gear VR to similar effect to the fully tracked controllers.</p></td>
 		</tr><tr>
 			<td colspan="1" rowspan="1"><p>Position and Rotation Tracking Controllers</p></td>
 			<td colspan="1" rowspan="1"><p>Fully tracked hands, allows great immersion and interaction.</p></td>
@@ -306,7 +306,7 @@
 
 <p>VR on the web looks to solve some of the issues VR currently has:</p>
 <p>One of the biggest issues is that the user has to make a <b>large commitment</b> to use a one off experience they may not want to come back to.</p>
-<p>On native mobile and desktop VR one has to download the App from some kind of App-Store such as Oculus store on GearVR or from Steam for the HTC Vive or Oculus Rift.</p>
+<p>On native mobile and desktop VR one has to download the App from some kind of App-Store such as Oculus store on Gear VR or from Steam for the HTC Vive or Oculus Rift.</p>
 <p>This app-store pattern lends itself well to expensive video games where users have already invested some money so are going to return again and again. But for one off experiences like shopping, viewing a movie or trying a new social platform this can be a large barrier to entry.</p>
 <p>Users tend to be put off by the idea of having apps laying around on the device taking up space, or using up a large amount of data-allowance to download. Especially if the user is on a mobile device which may have limited disk space or network data caps.</p>
 <p>On the web, once you leave the web page the user can stop worrying about, content hanging around as the browser will clean it up if space is needed. Whilst there is space the developer can still cache content on the user’s device for when they return. Letting you have your cake and eat it too.</p>
@@ -330,7 +330,7 @@
 
 <h3>What effect might VR have on the web in the longer term?</h3>
 
-<p>Virtual Reality has already had an effect on the Web Platform, the WebVR APIs have been implemented across multiple platforms and there are discussions about creating a WebVR working group within the W3c.</p>
+<p>Virtual Reality has already had an effect on the Web Platform, the WebVR APIs have been implemented across multiple platforms and there are discussions about creating a WebVR working group within the W3C.</p>
 <p>Virtual Reality is already going mainstream and with Augmented Reality and Mixed Reality devices starting to enter the consumer realm it is important the web is ready to take advantage of the new platforms.</p>
 <p>WebVR as we know it today which is entirely reliant on WebGL. Optimising for the WebGL use case will mean the browsers will have to look at taking advantage of the hardware’s optimisations to increase render speed towards that of a natively compiled app. Speed is important because dropping frames in VR can have disastrous effects even to the point of making the user ill!</p>
 <p><i>WebGL 2</i> will soon be reaching stable browsers. WebGL 2 brings WebGl closer to the OpenGL ES 3.0 spec. Greater visual fidelity and faster ways to do advanced graphics will make Virtual Reality truly an incredible visual experience.</p>
@@ -351,7 +351,7 @@
 <p>Part of the strength of the web and HTML lies in that it is a declarative language. Browsers can interpret it best according to the platform it is on. You don’t see the exact same website on your desktop computer as you do on your phone or TV. Virtual Reality is yet another platform in the variety of mediums to experience the web.</p>
 <p>By being declarative, like HTML or CSS, VR on the Web could automatically handle rendering to balance render speed and visual fidelity. A high end computer could use advanced shaders and detailed models; a low power mobile phone could automatically use simple shading and pick low poly models. Much like the way the &lt;picture&gt; element can be used to pick images which are the correct resolution and crop for the device it is on.</p>
 <p>HTML could be extended to include some common Virtual Reality use cases, such as: Playing 360 degree/3D videos and images, displaying 3D models or moving bits of the webpage outside of the 2D viewport into 3D space.</p>
-<p>Samsung has started to look at some of these use cases in the web browser, Samsung Internet for GearVR.</p>
+<p>Samsung has started to look at some of these use cases in the web browser, Samsung Internet for Gear VR.</p>
 <p>It has inbuilt support for 3D video using the &lt;video&gt; element. Example display a Side by side 3D, 360 degree video is just a HTML tag:</p>
 <pre><code>&lt;video controls src="360video.mp4" type="video/mp4; dimension=360-lr;"&gt;</code></pre>
 
