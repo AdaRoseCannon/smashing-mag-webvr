@@ -28,12 +28,12 @@
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 
 <h2>Virtual Reality for Web Developers</h2>
-<p><b>Abstract:</b> <span>There is recent proliferation of VR Web Browsers and VR capabilities added to traditional browsers. This article looks at the state of browsers in VR and the state of VR on the Web via the WebVR APIs. Finishing with a look at how a web developer with can feel comfortable working in the new medium via the popular library A-Frame, which uses the custom elements API to allow HTML to markup 3D scenes which can be controlled via familiar JavaScript.</span></p>
+<p><b>Abstract:</b> <span>Recently, there is a proliferation of VR Web Browsers and VR capabilities added to traditional browsers. This article looks at the state of browsers in VR and the state of VR on the Web via the WebVR APIs. Finally, we have a look at how a web developer with can feel comfortable working in the new medium via the popular library A-Frame, which uses the custom elements API to allow HTML to markup 3D scenes which can be controlled via familiar JavaScript.</span></p>
 
 <h3>State of Virtual Reality and the Web</h3>
-<p>The web has experimented with VR before with VRML, but now WebVR takes a new approach to VR, one more suited to the modern web. We've had accelerated 3D in the web since 2011 with the release of WebGL. Now the Web can handle VR thanks to new web APIs for taking advantage of Virtual Reality hardware using WebGL.</p>
-<p>These APIs enable WebGL content to be displayed in 3D in a VR headset, they also provide headset and controller tracking information to give the user presence in the virtual world.</p>
-<p>WebVR was first developed in 2014 at Mozilla and in 2016 an earlier version of the standard was available for Desktop Chrome, Firefox and Samsung’s Virtual Reality web browser: Samsung Internet for Gear VR. </span></p>
+<p>The web has experimented with VR before with VRML, but now WebVR takes a new approach to VR, one more suited to the modern web. We've had accelerated 3D in the web since 2011 with the release of WebGL. Now the Web can handle VR thanks to new web APIs for taking advantage of virtual reality hardware using WebGL.</p>
+<p>These APIs enable WebGL content to be displayed in 3D with a VR headset. They also provide headset and controller tracking information to give the user presence in the virtual world.</p>
+<p>WebVR was first developed in 2014 at Mozilla. In 2016, an earlier version of the standard was available for Desktop Chrome, Firefox and Samsung’s virtual reality web browser: Samsung Internet for Gear VR. </span></p>
 <p>These days, the standard is incredibly well supported on phones and desktop computers for almost all major headsets.</p>
 
 <figure>
@@ -107,9 +107,9 @@
 	<figcaption>WebVR Support as of June 2017 (Credit: <a href="https://blog.mozilla.org/press/2017/06/mozilla-brings-virtual-reality-to-all-firefox-users/">Mozilla Blog</a>)</figcaption>
 </figure>
 
-<p>The WebVR standards are worked on in the open and are a collaboration of Mozilla, Google, Samsung, Oculus, Microsoft and recently Apple.</p>
-<p>Which means that a single website that uses WebVR can make an immersive scene and deliver it to all major VR platforms at once, Desktop and Mobile!!</p>
-<p>Having the web able to handle Virtual Reality content allows one to easily share a VR experience a URL and view it in the browser without complicated app stores and long download times associated with native VR.</p>
+<p>The WebVR standards are worked on in the open and represent a collaboration between Mozilla, Google, Samsung, Oculus, Microsoft and, recently, Apple.</p>
+<p>This means that a single website that uses WebVR can make an immersive scene and deliver it to all major VR platforms at once, Desktop and Mobile!</p>
+<p>The web's ability to handle virtual reality content allows one to easily share a VR experience in a URL and view it in the browser without the complicated app stores and long download times associated with native VR.</p>
 
 
 <figure>
@@ -118,13 +118,13 @@
 </figure>
 
 
-<h3>Additional VR related, Web APIs in Samsung Internet</h3>
+<h3>Additional VR-related Web APIs in Samsung Internet</h3>
 <p>These APIs are not part of the WebVR API but are useful for viewing immersive content in traditional websites in an immersive web browser without needing to use WebGL.</p>
-<p>These APIs are being developed for <i>Samsung Internet for Gear VR</i> we hope they will be picked up by other browsers and standardised.</p>
+<p>These APIs are being developed for <i>Samsung Internet for Gear VR</i>. We hope they will be picked up by other browsers and standardised.</p>
 
 
 <h4>Panoramic Video</h4>
-<p>The ability to play panoramic videos (monoscopic and stereoscopic) immersively by setting the type="dimension=360;" attribute on a video tag. These videos also get enhanced in Samsung Internet 5.0 as well by allowing the user to pan the video with their finger.</p>
+<p>This is the ability to play panoramic videos (monoscopic and stereoscopic) immersively by setting the type="dimension=360;" attribute on a video tag. These videos also get enhanced in Samsung Internet 5.0 by allowing the user to pan around within the video using their fingertips.</p>
 <p>Possible values:</p>
 <ul>
 	<li><span>dimension=3d-lr</span><span>: Side-by-Side 3D Video</span></li>
@@ -149,13 +149,13 @@
 </figure>
 
 <h3>What is WebVR?</h3>
-<p>WebVR is a set of cross-browser JavaScript APIs which provide a variety of VR related utilities to enable putting the user into an immersive environment generated using WebGL.</p>
-<p>By providing a side-by-side rendered 3D image these APIs will handle all of the complexity involved in displaying an undistorted stereoscopic 3D image to the user.</p>
-<p>I won’t go into details of implementing the standard here as the standard is still changing. Most users will never need to deal with them directly as often WebGL tools and libraries include handling the WebVR APIs for you.</p>
+<p>WebVR is a set of cross-browser JavaScript APIs which provide a variety of VR related utilities to place the user into an immersive environment generated using WebGL.</p>
+<p>By providing a side-by-side rendered 3D images, these APIs will handle all of the complexity involved in displaying an undistorted stereoscopic 3D image to the user.</p>
+<p>I won’t go into details of implementing the standard here as the standard is still changing. Most users will never need to deal with them directly, as often WebGL tools and libraries include handling the WebVR APIs for you.</p>
 <h3>State of the WebVR APIs</h3>
-<p>Current version of the APIs is known internally as version 1.1, version 2.0 will change some of the method names and remove some unused methods.</p>
+<p>Current version of the APIs is known internally as version 1.1. Version 2.0 will change some of the method names and remove some unused methods.</p>
 <p>The precise details of the APIs can be read on <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">MDN</a> and the standards are discussed <a href="https://w3c.github.io/webvr/">on Github</a>. There is interest from within the <a href="https://www.w3.org/community/webvr/">WebVR community group</a> and the W3C to move to a W3C working group once they are ready.</p>
-<p>Essentially what it provides is:</p>
+<p>Essentially what the WebVR API provides is:</p>
 <ul>
 	<li>
 		Headset Tracking to allow the user to look around in the Virtual Environment. This comes with frame interpolation built in so that it is always tracking the user’s head even if you skip the occasional frame.
@@ -169,8 +169,8 @@
 
 
 <ul>
-	<li>6 degree of freedom and 3 degree of freedom controller support allowing controllers like those of the HTC Vive and the Gear VR to work in Virtual Reality. Allowing the user to use their hands to interact with the virtual environment. </li>
-	<li>Information about how the headset needs the 3D information rendered. Such as Field of View, how to position the render for each eye on the canvas.</li>
+	<li>6 degrees of freedom and 3 degrees of freedom controller support allowing controllers like those of the HTC Vive and the Gear VR to work in virtual reality. Allowing the user to use their hands to interact with the virtual environment. </li>
+	<li>Information about how the headset needs the 3D information rendered, such as field-of-view and how to position the render for each eye on the canvas.</li>
 	<li>A new headset specific requestAnimationFrame synced to the refresh rate of the display in the headset.</li>
 	<li>A method of submitting the rendered frames to the headset in the form of a WebGL enabled canvas element.</li>
 </ul>
@@ -182,30 +182,29 @@
 </figure>
 
 <h3>What does it mean to build a WebVR Immersive Experience?</h3>
-<p>Surprisingly, building a Virtual Reality website raises many of the same problems to tackle as building a good mobile website or progressive web app.</p>
+<p>Surprisingly, building a virtual reality website raises many of the same problems as building a good mobile website or progressive web app.</p>
 <h4>Starting Fast</h4>
-<p>One of the biggest problems being tackled on the web today is network performance which is important because:</p>
+<p>One of the biggest problems being tackled on the web today is network performance, which is important because:</p>
 <ul>
 	<li>User’s attention spans are shrinking</li>
 	<li>Networks are getting more congested</li>
 	<li>Websites are getting bigger than ever before</li>
 </ul>
-<p>WebGL and WebVR websites are certainly no exception to size, they can be very large if one is not careful! </p>
-<p>Right now VR content has an edge over traditional content because it is novel and interesting enough that users will likely wait a bit longer to have a go but still it is extremely important to get your 3D experience started in under a few seconds.</p>
-<p>Before your VR capable site has loaded it is just a 2D site and a promise of cool things to come. Users are impatient and only getting more so.</p>
+<p>WebGL and WebVR websites are certainly no exception to size; they can be very large if one is not careful! </p>
+<p>Right now VR content has an edge over traditional content because it is novel and interesting enough that users will likely wait a bit longer to have a go. Still it is extremely important to get your 3D experience started in under a few seconds. Users are impatient and only getting more so.</p>
+<p>Before your VR capable site has loaded it is just a 2D site and a promise of cool things to come. </p>
 <p>
-	My advice here is to not preload everything, load just enough for the user to get started then dynamically loading and start caching the rest. This behaviour should be familiar with those who have read about
+	My advice here is to not preload everything, load just enough for the user to get started, then dynamically load and start caching the rest. This behaviour should be familiar with those who have read about
 	<a href="https://developers.google.com/web/fundamentals/performance/prpl-pattern/">Google’s PRPL pattern</a>.
 </p>
-<p>Even just showing a blurred 360 skybox and some low poly content will allowing the user to look around will buy you precious seconds of engagement to bring in additional content to bootstrap an engaging experience.</p>
+<p>Even just showing a blurred 360 skybox and some low poly content allowing the user to look around will buy you precious seconds of engagement to bring in additional content and to bootstrap an engaging experience.</p>
 <p>It is far better to show something basic but fast than lose the user because they got bored waiting for a loading bar to complete.</p>
-<p>But bear-in-mind network operations can be CPU intensive and block the main thread. This could give the user a bad experience if it happens a lot so it is a fine line to walk.</p>
-<p>Perhaps one or two very intensive assets need to be preloaded to avoid breaking the experience but if you have so many it is taking a long time to start perhaps it's worth thinking about finding a more performant alternative.</p>
-<p>Better to show anything at all, even something incomplete, then have people leaving because they get bored looking at a loading bar.</p>
-<p>Making good use of a <a href="https://medium.com/samsung-internet-dev/a-beginners-guide-to-service-workers-f76abf1960f6">Service Worker and the Cache API</a> to cache static assets for fast return visits is a great way to keep users coming back for more.</p>
+<p>But bear in mind, network operations can be CPU intensive and block the main thread. This could give the user a bad experience if it happens a lot so it is a fine line to walk.</p>
+<p>Perhaps one or two very intensive assets need to be preloaded to avoid breaking the experience, but if you have so many it is taking a long time to start perhaps it's worth thinking about finding a more performant alternative.</p>
+<p>Making good use of a <a href="https://medium.com/samsung-internet-dev/a-beginners-guide-to-service-workers-f76abf1960f6">service worker and the Cache API</a> to cache static assets for fast return visits is a great way to keep users coming back for more.</p>
 
 <h4>Progressive Enhancement</h4>
-<p>The two main platforms for VR are polar opposites: High end desktop computers with advanced controllers; and Mid-High level mobile phones, which may have only a single rotation tracked controller or no controller at all!!</p>
+<p>The two main platforms for VR are polar opposites: high-end desktop computers with advanced controllers; and mid-high level mobile phones, which may have only a single rotation tracked controller or no controller at all!</p>
 
 <figure>
 	<img src="article-images/image3.jpg">		
@@ -214,19 +213,19 @@
 
 <b>This presents us with two challenges:</b>
 <ol start="1">
-	<li>Maintain a consistent frame rate across platforms with wildly differing performance capabilities.</li>
-	<li>Present a user friendly experience across VR devices with a wide range of inputs.</li>
+	<li>Maintaining a consistent frame rate across platforms with wildly differing performance capabilities.</li>
+	<li>Presenting a user friendly experience across VR devices with a wide range of inputs.</li>
 </ol>
 
 <p>Phones have by far the largest reach due to the popularity of the Gear VR and Daydream and the cheap price and high availability of the Google Cardboard headsets.</p>
 
-<p>Below I have described some typical controller configurations, you don’t need to support them all but handling the 'no controller' situation as a baseline and also supporting another controller option if applicable will allow everyone to experience something. Supporting all controller configurations would be nice but in my opinion not reasonable expectation.</p>
+<p>Below I have described some typical controller configurations; you don’t need to support them all but handling the 'no controller' situation as a baseline and also supporting another controller option if applicable will allow everyone to experience something. Supporting all controller configurations would be nice, but in my opinion not a reasonable expectation.</p>
 
-<p>Some libraries such as <a href="https://github.com/donmccurdy/aframe-extras">Universal Controls from A-Frame Extras</a> will try to make the best from whatever is available.</p>
+<p>Some libraries such as <a href="https://github.com/donmccurdy/aframe-extras">Universal Controls from A-Frame Extras</a> will try to make the best out of whatever is available.</p>
 
 <figure>
 	<img src="article-images/image1.png">
-	<figcaption>Web Compatible Controllers with increasing levels of immersion. From left to right: Gaze based tracking, Traditional Gaming Controllers, Rotational Tracked Controllers, Position and Rotation Tracked Controllers, Full Gesture Recognition. Eye illustration from Wikimedia Commons.</figcaption>
+	<figcaption>Web Compatible Controllers with increasing levels of immersion. From left to right: Gaze Based Tracking, Traditional Gaming Controllers, Rotational Tracked Controllers, Position and Rotation Tracked Controllers, Full Gesture Recognition. Eye illustration from Wikimedia Commons.</figcaption>
 </figure>
 
 <table>
@@ -266,24 +265,24 @@
 
 <h4>Asymmetric Play</h4>
 
-<p>Like with progressive enahncement on the web, just because you support all levels of hardware it does not mean you need deliver the same experience to all.</p>
+<p>Like with progressive enhancement on the web, just because you support all levels of hardware it does not mean you need to deliver the same experience to all.</p>
 
-<p>A user with two fully tracked hands in the world will be able to have a much more engaging experience and should not be limited by being delivered the same experience as someone with no controller.</p>
+<p>A user with two fully tracked hands in the virtual world will be able to have a much more engaging experience and should not be limited by being delivered the same experience as someone with no controller.</p>
 
-<p><b>An example:</b> A VR app where you produce VR artwork, could use tracked controllers to produce art on high powered machines; on mobile a user would be able to view this art in VR but be unable to edit it.</p>
+<p><b>An example:</b> A VR app where you produce VR artwork could use tracked controllers to produce art on high powered machines; on mobile a user would be able to view this art in VR, but be unable to edit it.</p>
 
-<p><b>Another example:</b> A networked VR multiplayer game, could use tracked controllers to play the game; A mobile viewer can watch it and use gazed based interactions to choose different points of view.</p>
+<p><b>Another example:</b> A networked VR multiplayer game could use tracked controllers to play the game; A mobile viewer could watch it and use gazed based interactions to choose different points of view.</p>
 
 <h4>Test as you develop</h4>
-<p>Like modern web design the key is to design mobile first. As you build your scene regularly test it on <b>real</b> mid level smart phones with no controllers to ensure it will work for the majority of your users.</p>
+<p>Like modern web design the key is to design mobile first. As you build your scene, regularly test it on <b>real</b> mid level smart phones with no controllers to ensure it will work for the majority of your users.</p>
 
-<p>WebVR allows you to target both Platforms at once but delivering the same content to both may result in mobile struggling or desktops not being used to their full potential.</p>
+<p>WebVR allows you to target both platforms at once but delivering the same content to both may result in mobile struggling or desktops not being used to their full potential.</p>
 
 <p>There is no problem having very well performing graphics. A stylized low-poly appearance can look fantastic and render very quickly.</p>
 
-<p>For upgrading graphics one solution is to provide options for graphical quality before your user starts using WebVR, if the user requests high quality then start downloading the large or difficult to render graphics.</p>
+<p>For upgrading graphics, one solution is to provide options for graphical quality before your user starts using WebVR. If the user requests high quality, then start downloading the large or difficult-to-render graphics.</p>
 
-<p>Something more difficult but more seamless is to start on lowest graphical setting and detect how well the device is performing using commands like requestIdleCallback or measuring how long the render takes. If the device is running well then maybe increase the graphics settings. If frames start being skipped then dynamically reduce it.</p>
+<p>Something more difficult, but more seamless, is to start on lowest graphical setting and detect how well the device is performing using commands like requestIdleCallback or measuring how long the render takes. If the device is running well then maybe increase the graphics settings. If frames start being skipped then dynamically reduce them.</p>
 
 <p>When you are upgrading your scene you may decide to do a few things:</p>
 <ul>
@@ -292,63 +291,78 @@
 	<li>Use more complex shaders</li>
 </ul>
 
-<p>This will ensure that users on mobile and desktop get the best possible experience. For most use cases though it is probably fine if the Desktop users get the mobile experience as you can guarantee it will maintain great frame rate on the Desktop if it also does on mobile.</p>
+<p>This will ensure that users on mobile and desktop get the best possible experience. For most use cases though it is probably fine if the desktop users get the mobile experience as you can guarantee it will maintain great frame rate on the desktop if it also does on mobile.</p>
 
 <p>After all there is more to a great scene than visual fidelity. Highly stylised games like <i>Team Fortress 2</i> still look great today where as "realistic" games from the same era have not aged so well.</p>
 
-<p>A great scene should have a well designed graphical style With bold colours and strong silhouettes. This will help low-power and low-resolution devices look good but also still look great on Desktop devices only needing a little bit of extra polish.</p>
+<p>A great scene should have a well designed graphical style with bold colours and strong silhouettes. This will help low-power and low-resolution devices look good, but also still look great on desktop devices only needing a little bit of extra polish.</p>
 
-<p>In VR most users will have the equivalent of poor eyesight so it is important to bare this in mind and minimise uses of text or cause the user to strain their eyes to look at something.</p>
+<p>In VR most users will have the equivalent of poor eyesight so it is important to bare this in mind. This minimise uses of text or causes the user to strain their eyes to look at something.</p>
 
-<h3>What does the Web bring to VR?</h3>
+<h3>What does the web bring to VR?</h3>
 
 <p>VR on the web looks to solve some of the issues VR currently has:</p>
-<p>One of the biggest issues is that the user has to make a <b>large commitment</b> to use a one off experience they may not want to come back to.</p>
-<p>On native mobile and desktop VR one has to download the App from some kind of App-Store such as Oculus store on Gear VR or from Steam for the HTC Vive or Oculus Rift.</p>
-<p>This app-store pattern lends itself well to expensive video games where users have already invested some money so are going to return again and again. But for one off experiences like shopping, viewing a movie or trying a new social platform this can be a large barrier to entry.</p>
+<p>One of the biggest issues is that the user has to make a <b>large commitment</b> to use a one-off experience they may not want to come back to.</p>
+<p>On native mobile and desktop VR one has to download the app from an app-store such as the Oculus store on Gear VR or from Steam for the HTC Vive or Oculus Rift.</p>
+<p>This app-store pattern lends itself well to expensive video games where users have already invested some money so are going to return again and again. But for one-off experiences like shopping, viewing a movie, or trying a new social platform, this can be a large barrier to entry.</p>
 <p>Users tend to be put off by the idea of having apps laying around on the device taking up space, or using up a large amount of data-allowance to download. Especially if the user is on a mobile device which may have limited disk space or network data caps.</p>
-<p>On the web, once you leave the web page the user can stop worrying about, content hanging around as the browser will clean it up if space is needed. Whilst there is space the developer can still cache content on the user’s device for when they return. Letting you have your cake and eat it too.</p>
-<p>Of course this requires the developer to make VR websites which are not stored as a single giant bundle otherwise the gains the web can provide are lost.</p>
-<p>By delivering VR assets dynamically and separately like those of a web page you can take advantage of all the smart caching the web can provide from the CDN all the way down to the HTTP cache and the Service Worker's Cache API on the device.</p>
+<p>On the web, once you leave the web page the user can stop worrying about content hanging around as the browser will clean it up if space is needed. Whilst there is space the developer can still cache content on the user’s device for when they return, letting you have your cake and eat it too.</p>
+<p>Of course this requires the developer to make VR websites which are not stored as a single giant bundle, otherwise the gains the web can provide are lost.</p>
+<p>By delivering VR assets dynamically and separately like those of a web page, you can take advantage of all the smart caching the web can provide from the CDN all the way down to the HTTP cache and the service worker's Cache API on the device.</p>
 <p>Further more the user can jump straight into your VR experience with very little waiting.</p>
-<p>An optimised WebVR website can render the first frame within a single second of the user landing on the website. Totally cutting out any lengthy initial downloads or app stores. Massively increasing engagement.</p>
+<p>A highly optimised WebVR website should render the first frame within a single second of the user landing on the website. Totally cutting out any lengthy initial downloads or app stores. Massively increasing engagement.</p>
 <p>Experiences can be shared with nothing but a URL, which can be shared by social media or email, even written on a wall or a displayed on TV, making it much more likely your VR content will go viral due to it’s low barrier to entry.</p>
 
 <h4>Making the most out of the quick web</h4>
-<p>One feature WebVR sites often has is that before they enter VR you can usually view and interact with the scene on your 2D display the view will often rotate with the phone giving the appearance of a magic window.</p>
+<p>One feature WebVR sites often has is that before they enter VR you can usually view and interact with the scene on your 2D display. The view will often rotate with the phone giving the appearance of a magic window into a virtual space.</p>
 
-<p>This is a very powerful pattern. It allows users to get a preview of your VR scene without needing to put on their VR headset. Great for when they don’t have their VR gear to hand or are on public transport and don’t want to where VR equipement in public.</p>
-<p>This will encourage them to bookmark your site to try in VR when it is more suitable for them.</p>
+<p>The magic window is a very powerful pattern. It allows users to get a preview of your VR scene without needing to put on their VR headset. This is great for when they don’t have their VR gear to hand or are on public transport and don’t want to wear VR equipment in public.</p>
+<p>When the user has had a taste it will encourage them to bookmark your site to try in VR when it is more suitable for them.</p>
+
+
 <h4>The web has high level interfaces to low level APIs bringing advanced technology to any developer.</h4>
-<p>There are many web APIs you may have heard of or used which become massively more relevant in a Virtual Reality context.</p>
-<p><b>WebSockets — </b>Used to stream text and binary data to a server in real time. In VR they can be used to sync 100s of users in real time to enjoy a shared experienced and see Avatars representing each other. I recently produced an open source demo where I did this live for <a href="https://medium.com/samsung-internet-dev/wow-that-was-some-night-in-vr-ba091be38794">over 100 users at a conference</a>.</p>
-<p><b>WebRTC — </b>To expand upon shared VR, one can also use WebRTC to maintain Peer to Peer connections for Binary Data and Video/Audio Streaming. This can be used to allow two avatars to perform voice chat. Or to sync the position and posture of a Virtual Reality Avatar without going through a central server. This can be used to connect 6–8 users at a time.</p>
-<p><b><a href="https://medium.com/samsung-internet-dev/web-audio-on-different-platforms-67fc9ffc2c4e">WebAudio</a> — </b>One of the most surprisingly powerful APIs. The browser contains everything you need for audio manipulation and analysis. One can even use a panner node for spatial audio in VR. For producing virtual environments that give an immersive feel, WebAudio is more important than ever before.</p>
-<p><b>SpeechRecognition — </b>Newer browsers contain a speech recognition engine built in! Useful for giving commands and entering text when a real or virtual keyboard is difficult or unwieldy. There is a great example built for VR here: <a href="https://samsunginter.net/word-drop/">https://diekus.net/Word-Drop/</a></p>
+<p>There are many web APIs you may have heard of or used which become massively more relevant in a virtual reality context.</p>
+<p><b>WebSockets — </b>Used to stream text and binary data to a server in real time. For VR they can be used to sync 100s of users in real time to enjoy a shared experienced and see Avatars representing each other. I recently produced an open source demo where I did this live for <a href="https://medium.com/samsung-internet-dev/wow-that-was-some-night-in-vr-ba091be38794">over 150 users at a conference</a>.</p>
+<p><b>WebRTC — </b>To expand upon shared VR, one can also use WebRTC to maintain peer-to-peer connections for binary data and video/audio streaming. This can be used to allow two avatars to perform voice chat, or to sync the position and posture of a virtual reality Avatar without going through a central server. This can be used to connect 6–8 users at a time.</p>
+<p><b><a href="https://medium.com/samsung-internet-dev/web-audio-on-different-platforms-67fc9ffc2c4e">WebAudio</a> — </b>One of the most surprisingly powerful APIs. The browser contains everything you need for audio manipulation and analysis. One can even use a panner node for 3D spatial audio in VR. For producing virtual environments that give an immersive feel, WebAudio is more important than ever before.</p>
+<p><b>SpeechRecognition — </b>Newer browsers contain a built in speech recognition engine! Useful for giving commands and entering text when a real or virtual keyboard is difficult or unwieldy. There is a great example built for VR here: <a href="https://samsunginter.net/word-drop/">https://samsunginter.net/word-drop/</a></p>
 
 <h3>What effect might VR have on the web in the longer term?</h3>
 
 <p>Virtual Reality has already had an effect on the Web Platform, the WebVR APIs have been implemented across multiple platforms and there are discussions about creating a WebVR working group within the W3C.</p>
-<p>Virtual Reality is already going mainstream and with Augmented Reality and Mixed Reality devices starting to enter the consumer realm it is important the web is ready to take advantage of the new platforms.</p>
-<p>WebVR as we know it today which is entirely reliant on WebGL. Optimising for the WebGL use case will mean the browsers will have to look at taking advantage of the hardware’s optimisations to increase render speed towards that of a natively compiled app. Speed is important because dropping frames in VR can have disastrous effects even to the point of making the user ill!</p>
-<p><i>WebGL 2</i> will soon be reaching stable browsers. WebGL 2 brings WebGl closer to the OpenGL ES 3.0 spec. Greater visual fidelity and faster ways to do advanced graphics will make Virtual Reality truly an incredible visual experience.</p>
-<p>WebAudio may be required to produce more accurate Head-related transfer function to better reproduce 3D audio. Accurate 3D Audio will be essential for delivering a high quality immersive video content such as 360 movies.</p>
+
+<p>Virtual Reality is already going mainstream and with augmented reality and mixed reality devices starting to enter the consumer realm, it is important the web is ready to take advantage of the new platforms.</p>
+
+<p>WebVR as we know it today is entirely reliant on WebGL. Optimising for this WebGL use case will mean the browsers will have to look at taking advantage of the hardware’s optimisations to increase render speed towards that of a natively compiled app. Speed is important because dropping frames in VR can have disastrous effects, even to the point of making the user ill!</p>
+
+<p><i>WebGL 2</i> will soon be reaching stable browsers. WebGL 2 brings WebGL closer to the OpenGL ES 3.0 spec. Greater visual fidelity and faster ways to do advanced graphics will make virtual reality truly an incredible visual experience.</p>
+
+<p>WebAudio may be required to produce more accurate 3D audio transforms, known as head related transfer functions, to better reproduce the high quality 3D audio required by big budget productions. Accurate 3D Audio will be essential for delivering a high quality immersive video content such as 360 movies and immersive audio experiences.</p>
+
 <p>Scripting on the web as well would benefit from significant performance improvements. There are a number of JavaScript APIs in the works which can be used to increase performance in the Web.</p>
-<p>JavaScript itself can be optimised and precompiled: <i>WASM</i> (Web Assembly) can provide some speed ups across the board. Providing a bundle which is smaller to download, faster to parse and execute. If used wisely in a modular fashion, WASM could be used to be the core rendering engine of a WebVR experience, but controlled using JavaScript.</p>
-<p>The browser has Web Workers to enable calculations which do not block the main thread, which is primarily used for rendering. This is useful for manipulating large amounts of data with CPU intensive calculations such as Physics Engines. This means that you are unlikely to heavily effect the framerate by doing expensive physics operations.</p>
-<p>There is a cost associated with sending data to and from web workers this is alleviated partially by transferable objects, allowing you to change the owner of Array Buffers but handling the transferring of this object can be difficult and error prone if a mistake is made. Shared Array Buffers will allow multiple threads to share the same Array Buffer useful for this use case.</p>
+
+<p>JavaScript itself can be optimised and precompiled. Another option is to compile other languages to <i>WASM</i> (Web Assembly). This can provide some speed ups across the board. Providing a bundle which is smaller to download and faster to parse and execute. If used wisely in a modular fashion, WASM could be used to make the core rendering engine of a WebVR experience, which we could still interact with using JavaScript like we do today.</p>
+
+<p>The browser can make use of Web Workers to enable calculations which do not block the main thread. This is good because the main thread is primarily used for rendering.
+WebWorkers are useful for manipulating large amounts of data with CPU intensive calculations such as Physics Engines. By isolating the calculations from the main thread this way, they are less likely to trigger frame drops.</p>
+
+<p>Unfortunately there is some cost associated with sending data to and from web workers to use them in the main thread this is alleviated partially by transferable objects. Transferable objects such as ArrayBuffers allow you to change the owner of the object but handling the transferring of this object can be difficult and error prone if a mistake is made.</p>
 <p><a href="https://medium.com/samsung-internet-dev/being-fast-and-light-using-binary-data-to-optimise-libraries-on-the-client-and-the-server-5709f06ef105">I write about using Array Buffers in the Web here.</a></p>
-<p>On the topic of workers part of the issue is that right now the thread which renders the web page also needs to be used to render the WebGL scene. So any side effects of other code you run such Garbage Collection or CPU bound functions may cause frames to be dropped.</p>
-<p>OffscreenCanvaswould enables rendering to be performed in a web worker this will help the very important and sensitive render loop to be isolated from the other threads. </p>
-<p>The other important rendering use case is prerecorded 2D and 3D video. These can be used as textures in WebGL. But they lack fine grain control like we have an &lt;audio&gt; element and an  audioContext in JavaScript we will need to add a  videoContext  to enable performant video manipulation to assist with playing 360 videos in 3D. </p>
-<p>An area where the Web and Virtual Reality currently lie at odds with the web as a whole is rendering documents in Virtual Reality. Displaying documents is the core functionality of the web platform but displaying a document in WebGL is nigh impossible without some very slow, very clever re-rendering. </p>
+<p>A new API called Shared Array Buffers will allow multiple workers to share the same Array Buffer useful for this use case.</p>
+
+<p>On the topic of workers part of the issue is that right now the thread which renders the web page also needs to be used to render the WebGL scene. So any side effects of other code you run on the main thread such Garbage Collection or CPU bound functions may cause frames to be dropped.</p>
+<p>OffscreenCanvas enables rendering to be performed in a web worker this will help the very important and sensitive render loop to be isolated from the other threads.</p>
+
+<p>The other important rendering use case is prerecorded 2D and 3D video. These can be used as textures in WebGL. But they lack fine grain control like we have an &lt;audio&gt; element and an  audioContext in JavaScript we will need to add a  videoContext  to enable performant video manipulation to assist with playing 360 videos in 3D.</p>
+
+<p>An area where the Web and virtual reality currently lie at odds with the web as a whole is rendering documents in virtual reality. Displaying documents is the core functionality of the web platform but displaying a document in WebGL is nigh impossible without some very slow, very clever re-rendering. </p>
 <p>It would be great to bring them together by having the browser expose rendered DOM content to WebGL, would allow us to take advantage of the Webs power for 2D interfaces but may potentially be a security/privacy risk!</p>
 
 <h3>Another path</h3>
-<p>WebGL based VR doesn’t necessarily have to be the future. Performing every single Virtual Reality use case in WebGL seems short sighted at best; and potentially fatal for the web in the long run. </p>
-<p>Part of the strength of the web and HTML lies in that it is a declarative language. Browsers can interpret it best according to the platform it is on. You don’t see the exact same website on your desktop computer as you do on your phone or TV. Virtual Reality is yet another platform in the variety of mediums to experience the web.</p>
-<p>By being declarative, like HTML or CSS, VR on the Web could automatically handle rendering to balance render speed and visual fidelity. A high end computer could use advanced shaders and detailed models; a low power mobile phone could automatically use simple shading and pick low poly models. Much like the way the &lt;picture&gt; element can be used to pick images which are the correct resolution and crop for the device it is on.</p>
-<p>HTML could be extended to include some common Virtual Reality use cases, such as: Playing 360 degree/3D videos and images, displaying 3D models or moving bits of the webpage outside of the 2D viewport into 3D space.</p>
+<p>WebGL based VR doesn’t necessarily have to be the future of VR on the web. Having to perform even the simplest use cases for WebVR in WebGL seems short sighted at best; and potentially fatal for VR on the web in the long run.</p>
+<p>Part of the strength of the web and HTML lies in that it is a declarative language. Browsers can interpret it best according to the platform it is on. You don’t see the exact same website on your desktop computer as you do on your phone or TV. virtual reality is yet another platform in the variety of mediums to experience the web.</p>
+<p>By being declarative, like HTML or CSS, VR on the Web could automatically handle rendering to balance render speed and visual fidelity. A high end computer could use advanced shaders and detailed models; a low power mobile phone could automatically use simple shading and pick low poly models. Much like the way the &lt;picture&gt; element can be used to download images which are the correct resolution and crop for the device it is on.</p>
+<p>HTML could be extended to include some common virtual reality use cases, such as: Playing 360 degree/3D videos and images, displaying 3D models or moving bits of the webpage outside of the 2D viewport into 3D space.</p>
 <p>Samsung has started to look at some of these use cases in the web browser, Samsung Internet for Gear VR.</p>
 <p>It has inbuilt support for 3D video using the &lt;video&gt; element. Example display a Side by side 3D, 360 degree video is just a HTML tag:</p>
 <pre><code>&lt;video controls src="360video.mp4" type="video/mp4; dimension=360-lr;"&gt;</code></pre>
@@ -357,20 +371,20 @@
 <p>Of course these needn’t be mutually exclusive. The web can provide some ability to handle and optimise for simple VR use cases whilst also providing optimisations for building immersive VR from scratch with WebGL.</p>
 <p>The Extensible Web manifesto is the idea that the web does not have to sacrifice extensibility for ease of use. That the community can use the low level tools provided to extend the web platform using libraries.</p>
 <p>Virtual Reality is one case this vision seems very relevant. We already have the low level tools of WebGL and the WebVR APIs.</p>
-<p>The library <a href="https://aframe.io">A-Frame</a> provides custom HTML elements to build WebGL based 3D scenes in a way which is usable on it’s own and with popular frameworks such as React and Angular.</p>
+<p>The library <a href="https://aframe.io">A-Frame</a> provides custom HTML elements to build WebGL based 3D scenes. A-Frame is usable on it’s own or with popular frameworks such as React and Angular.</p>
 <p>A-Frame allows any web developer with HTML experience to describe VR ready 3D scenes. To control them using familiar JavaScript. Even tools like JQuery, Angular and React can be used to change your scene because at the end of the day it is still just HTML.</p>
 
 <h3>Final Message</h3>
-<p>The web has the power to bring Virtual Reality to the world. To every consumer; to every developer.</p>
+<p>The web has the power to bring virtual reality to the world. To every consumer; to every developer.</p>
 <p>It is still early days for VR in the web but now is the time to get building. To see what works and what does not.</p>
-<p>The web can show that VR is for more than video games. Virtual Reality can be used to enhance everything we currently do on the web and even enable new interactions only possible in an immersive medium.</p>
-<p>As developers we can start building Virtual Reality experiences on the web today. By getting involved and giving feedback into the standards process we can ensure that VR on the web becomes a robust standard paving the way for future developers to build on.</p>
+<p>The web can show that VR is for more than video games. Virtual reality can be used to enhance everything we currently do on the web and even enable new interactions only possible in an immersive medium.</p>
+<p>As developers we can start building virtual reality experiences on the web today. By getting involved and giving feedback into the standards process we can ensure that VR on the web becomes a robust standard paving the way for future developers to build on.</p>
 <p>Even if you don’t think VR is mature yet. With mixed reality and augmented reality devices round the corner what we build today will still be relevant then. The interface patterns we build for VR will apply to all immersive mediums. Don’t be left behind.</p>
 
 <p>Together we will build the web of tomorrow.</p>
 
 <h3>About the Author</h3>
-<p>Ada Rose is a web advocate/senior engineer at Samsung Internet. Primarily focused on Progressive Web Apps and Virtual Reality.</p>
+<p>Ada Rose is a web advocate/senior engineer at Samsung Internet. Primarily focused on Progressive Web Apps and virtual reality.</p>
 
 <p><a href="https://twitter.com/lady_ada_king">@lady_ada_king</a></p>
 <p><a href="https://ada.is">Website</a></p>
